@@ -1,0 +1,338 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your FoodOrder</title>
+    
+    <html lang="en">
+    <style>
+
+*{
+
+    margin: 0;
+    padding: 0;
+    font-family: 'Robott' , sans-serif;
+
+
+}
+.container{
+    
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(7, 7, 7, 0.7),rgba(0, 0, 0, 0.7)),url(12.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    }
+    .navbar{
+        background: linear-gradient(to right, #c391fd, #8bd6ff);
+        height: 12%;
+        display: flex;
+        align-items: center;
+        
+     }
+     
+    .menu-icon{
+        width: 30px;
+        cursor: pointer;
+        margin-left: 40px;
+    }
+    nav{
+        flex: 1;
+        text-align: right;
+    }
+    nav ul li{
+        list-style: none;
+        display: inline-block;
+        margin-left: 20px;
+    }
+    nav ul li a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 13px;
+    
+    }
+    .row {
+        display: flex;
+        height: 88%;
+        align-items: center;
+    
+    }
+    .col{
+        flex-basis: 50%;
+    
+    }
+    h1{
+        color: #ffffff;
+        font-size: 40px;
+    }
+    h2{
+        color: #000000;
+        font-size: 40px;
+    }
+    p{
+        color: #000000;
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .card{
+        width: 260px;
+        height: 230px;
+        display: inline-block;
+        border-radius: 10px;
+        padding: 10px 25px;
+        box-sizing: border-box;
+        cursor:pointer;
+        margin: 20px 15px;
+         background-position:center;
+         background-size: cover; 
+         transition: transform 0.5s;
+    }
+    .card1{
+        background-image: url('https://img.freepik.com/premium-photo/delicious-homemade-burgers-beef-cheese-vegetables-old-wooden-table_667286-515.jpg'); }
+    .card2{
+        background-image: url('https://cdnb.artstation.com/p/assets/images/images/048/023/117/large/loeisa-4.jpg?1649023885'); 
+    }
+    .card3{
+        background-image: url('https://c4.wallpaperflare.com/wallpaper/498/712/47/food-burger-burgers-fries-hd-wallpaper-thumb.jpg');
+        
+    }
+    
+    .card:hover{
+        margin-right: -100px;
+        
+
+        transform: translateY(-10px);
+    }
+    h5{
+        color: #fff;
+        text-shadow: 0 0 5px #999;
+    }
+    .card p {
+        text-shadow: 0 0 15px #000;
+        font-size: 8px;
+    }
+    .search-bar{
+        width: 30%;
+        min-width: 80px;
+        background: rgba(255,255,255,0.2);
+        display: flex;
+        align-items: center;
+        border-radius: 30px;
+        padding: 1px 10px;
+        backdrop-filter:blur(10px) saturate(180%);
+    }
+    .search-bar input{
+        background: transparent;
+        flex: 1;
+        border: 0;
+        outline: none;
+        padding: 24px 20px;
+        font-size: 20px;
+        color:#f4f4f6;
+    }
+    ::placeholder{
+        color: #cac7ff;
+    }
+    .search-bar input img{
+        width: 10px;
+        height: 5;
+    }
+    .search-bar button{
+        border: 0;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        background: #ffffff;
+        cursor: pointer;
+
+    }
+    
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(to right, #c391fd, #8bd6ff);
+                        padding: px;
+            text-align: center;
+            color: #0f0f0f;
+        }
+        nav {
+            background-color: #eae7e7;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #0f0f0f;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+        }
+        #main-content {
+            padding: 20px;
+            text-align: center;
+
+        }
+        img {
+            width: 100%;
+            height: 40%;
+    
+        }
+ 
+
+        .second-container {
+            border: 1px solid #cccccc;
+            padding: 20px;
+            width: 500px;
+            text-align: center;
+            margin: 0 auto; /* توسيط الصندوق */
+            border-radius: 20px; /* تغيير شكل الحواف */
+
+        }
+        .row {
+        flex-wrap: wrap;
+
+
+        }
+     
+        
+        .second-rounded-box {
+            width: 100px;
+            height: 50px;
+            border-radius: 20px; /* تغيير شكل الحواف */
+            background-color: #7dbce6;
+            color: #2e5bfd;
+            font-size: 16px;
+            line-height: 50px;
+            text-align: center;
+            cursor: pointer;
+            margin-top: 20px; /* تباعد بين الصندوق والزر */
+            display: flex;
+            margin-right: -10px;
+        }
+
+        /* تعديل حجم الصورة */
+        .second-img {
+            width: 500px; /* تعديل عرض الصورة */
+            height: 300px; /* تعديل ارتفاع الصورة */
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Your FoodOrder</h1>
+                <div class="navbar">
+            <form action="" class="search-bar">
+                <input type="text" placeholder="search anything" name="q">
+                <button type="submit"><img src="https://img.icons8.com/?size=30&id=59878&format=png"></button>
+                
+                
+            </form>
+            
+    </header>
+      
+
+            
+    <nav>
+        
+    <nav>
+    <a onclick="redirectToPage('Home.html')">Home</a>
+    <a onclick="redirectToPage('Shopping basket.html')">order</a>
+    <a onclick="redirectToPage('Registration.html')">Registration</a>
+    <a onclick="redirectToPage('Login.html')">Login</a>
+    </nav>
+	
+	<script>
+    function redirectToPage(page) {
+        window.location.href = page;
+    }
+</script>
+
+<div id="slideshow-container">
+        <img src="https://content-prod-live.cert.starbucks.com/binary/v2/asset/137-89438.jpg" alt="Description" width="300" height="30">
+        
+        <img src="https://befoodnv.be/static/uploads-cms2/home-banner-befood-1800-def.jpg" alt="Description" width="300" height="30">
+        
+        <img src="https://th.bing.com/th/id/R.549c80916883ca6474c24769177432c9?rik=kan%2fODTXrWjlag&riu=http%3a%2f%2fgamehag.com%2fimg%2fgames%2fbackground%2fstarbucks.jpg&ehk=U7WE3Nh5lWbVKvBG36D1%2fpQHrBxk0Z2ViyTIdXgMA0E%3d&risl=&pid=ImgRaw&r=0" alt="Description" width="300" height="30">
+        
+        <img src="https://cdn.getiryemek.com/restaurants/1654598499189_1125x522.jpeg" alt="Description" width="300" height="30">
+        
+        
+    </div>
+    
+    
+    <div id="main-content">
+        <h2>Welcome to Your FoodOrder</h2>
+        <p>Explore a wide range of food products and accessories. Find everything you need to eat.</p>
+    </div>
+
+
+                
+            </nav>
+ 
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h2>Online food's store</h2> 
+                  <p>Premium FoodOrder
+                    
+                    <br>
+                    fast and delicious food for you .
+            
+                    make your life easy!!
+</p>
+<div class="col">
+    <div class="card card1"><a href="Products.html">
+        <h5>PRODUCTS </h5></a>
+    </div>
+
+    <div class="card card2"><a href="Shipping444A.html">
+        <h5>SHIPPING </h5></a>
+    </div>
+
+    <div class="card card3"><a href="Payment.html">
+        <h5>PAYMENT </h5></a>
+    </div>
+</div>
+                  </div>
+
+<div class="second-container">
+
+    <img class="second-img" src="https://content-prod-live.cert.starbucks.com/binary/v2/asset/143-83133.jpg" alt="صورة">
+    <h5>Hearty on the go</h5>
+    <p>For a delicious, protein-rich option, rely on ham and sausage sandwiches and egg rolls.</p>
+    <div class="second-rounded-box">Order Now</div>
+</div>
+
+
+
+   
+<footer>
+    <p>&copy; 2023 Your FoodOrder. All rights reserved.</p>
+</footer>
+
+<script>
+    let currentIndex = 0;
+    const images = document.querySelectorAll('#slideshow-container img');
+
+    function showNextImage() {
+        images[currentIndex].style.display = 'none';
+        currentIndex = (currentIndex + 1) % images.length;
+        images[currentIndex].style.display = 'block';
+    }
+
+    setInterval(showNextImage, 2000); // Change image every 3 seconds (adjust as needed)
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Information</title>
+    <style>
+        body {
+            font-size: 20px;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        header img {
+            width: 280px;
+        }
+
+        section {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: calc(100% - 16px);
+            padding: 8px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #000000;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 14px;
+            color: #777;
+        }
+
+        #error-message {
+            color: red;
+            display: none;
+            margin-top: 10px;
+        }
+
+        #map {
+            height: 300px;
+            width: 100%;
+            margin-bottom: 12px;
+            display: ; /* Initially hide the map */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Main payment form -->
+    <section id="delivery-information">
+        <h2>Delivery Information</h2>
+        <form>
+            <label for="location">Location</label>
+            <input type="text" id="location" placeholder="Oman" required>
+            <div id="map"></div>
+
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" required>
+
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" required>
+
+            <label for="phone-number">Phone Number</label>
+            <input type="tel" id="phone-number" placeholder="OM +968" required>
+
+            <p>Need Correct Phone Number for delivery</p>
+
+            <label for="state">State/Province</label>
+            <input type="text" id="state" required>
+
+            <label for="city">City</label>
+            <input type="text" id="city" required>
+
+            <label for="post-zip-code-errors">Post/Zip Code</label>
+            <input type="text" id="post-zip-code-errors" required>
+
+            <label for="address-line-1-errors">Address Line 1</label>
+            <input type="text" id="address-line-1-errors" placeholder="Street, Address, Company Name, C/O" required>
+
+            <label for="address-line-2-errors">Address Line 2</label>
+            <input type="text" id="address-line-2-errors" placeholder="Apartment, Suite, Unit, Building, Floor, etc. (Optional)">
+
+            <label for="contact-email-errors">Contact Email</label>
+            <input type="email" id="contact-email-errors" placeholder="Enter an email to accept the order and shipping information." required>
+
+            <button type="button" onclick="checkEmail()">SAVE</button>
+        </form>
+
+        <p id="error-message">Invalid email. Please try again.</p>
+    </section>
+
+    <script>
+        function checkEmail() {
+            var emailInput = document.getElementById("contact-email-errors").value;
+            var errorMessage = document.getElementById("error-message");
+    
+            if (!isValidEmail(emailInput)) {
+                errorMessage.style.display = "block";
+            } else {
+                // Redirect to payment.html or perform other actions
+                window.location.href = "payment.html";
+            }
+        }
+    
+        function isValidEmail(email) {
+            return email.includes("@");
+        }
+    </script>
+    
+    <!-- Google Maps API -->
+    <script>
+        var map; // Declare map globally
+    
+        // Initialize and display the map after a delay
+        function initMap() {
+            setTimeout(function() {
+                map = new google.maps.Map(document.getElementById('map'), {
+                    center: { lat: -25.363, lng: 131.044 },
+                    zoom: 8
+                });
+                document.getElementById('map').style.display = "block"; // Show the map
+            }, 3000); // Delay in milliseconds (e.g., 3000 = 3 seconds)
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</body>
+
+</html>
